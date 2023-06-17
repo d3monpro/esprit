@@ -34,14 +34,7 @@ public class IngredientFXMLController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        TableColumn idColumn= new TableColumn("id");
-        TableColumn nameColumn= new TableColumn("name");
-        TableColumn quantityColumn= new TableColumn("quantity");
-        TableColumn validityColumn= new TableColumn("validity");
-        TableColumn actionColumn= new TableColumn("action");
-        
-        tableView.getColumns().addAll(idColumn,nameColumn,quantityColumn,validityColumn,actionColumn);
-        
+       
         final ObservableList<Ingredient> ingredients= FXCollections.observableArrayList(
         new Ingredient(1,"Fromage Rappé",20,true),
         new Ingredient(2,"Ketchup",3,true),
@@ -50,10 +43,10 @@ public class IngredientFXMLController implements Initializable {
         new Ingredient(5,"Mayonnaise",0,false)
         );
         
-        idColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
-        nameColumn.setCellValueFactory(new PropertyValueFactory<>("nameingredient"));
-        quantityColumn.setCellValueFactory(new PropertyValueFactory<>("qte"));
-        validityColumn.setCellValueFactory(new PropertyValueFactory<>("validity"));
+        id.setCellValueFactory(new PropertyValueFactory<>("id"));
+        name.setCellValueFactory(new PropertyValueFactory<>("nameingredient"));
+        quantity.setCellValueFactory(new PropertyValueFactory<>("qte"));
+        validity.setCellValueFactory(new PropertyValueFactory<>("validity"));
         
         tableView.setItems(ingredients);
         

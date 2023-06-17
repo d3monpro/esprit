@@ -12,7 +12,8 @@ public class Ingredient {
         
     }
 
-    public Ingredient(String nameingredient, int qte, boolean validity) {
+    public Ingredient(int id, String nameingredient, int qte, boolean validity) {
+        this.id=id;
         this.nameingredient = nameingredient;
         this.qte = qte;
         this.validity = validity;

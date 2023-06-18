@@ -19,7 +19,7 @@ public class DataSource {
     private Connection createConnection(){
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection =DriverManager.getConnection("jdbc:mysql://localhost:3306/restaurantmanagment","root","");
+            connection =DriverManager.getConnection("jdbc:mysql://localhost:3306/restaurantmanagement","root","");
             System.out.println("Database succefully connected\n--------------------------------------------------\n");
 
         }catch (ClassNotFoundException ex){
@@ -40,6 +40,6 @@ public class DataSource {
     }
     
     public Connection getConnection(){
-        return dataSource.createConnection();
+        return connection;
     }    
 }

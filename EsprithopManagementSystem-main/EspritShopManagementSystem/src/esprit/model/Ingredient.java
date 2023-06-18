@@ -5,18 +5,16 @@ public class Ingredient {
     private int id;
     private String nameingredient;
     private int qte;
-    private boolean validity;
 
     
     public Ingredient(){
         
     }
 
-    public Ingredient(int id, String nameingredient, int qte, boolean validity) {
+    public Ingredient(int id,String nameingredient, int qte) {
         this.id=id;
         this.nameingredient = nameingredient;
         this.qte = qte;
-        this.validity = validity;
     }
     
     
@@ -44,13 +42,6 @@ public class Ingredient {
         this.qte = qte;
     }
 
-    public boolean isValidity() {
-        return validity;
-    }
-
-    public void setValidity(boolean validity) {
-        this.validity = validity;
-    }
     
     
     
